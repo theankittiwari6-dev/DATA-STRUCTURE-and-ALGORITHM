@@ -14,3 +14,18 @@ def fun(nums):
 
 nums  = [-2,1,-3,4,-1,2,1,-5,4]
 print(fun(nums))
+
+# optimal solution 
+
+
+def maxSubArray(self, nums: List[int]) -> int:
+        n= len(nums)
+        maxi = float("-inf")
+        total = 0
+        for i in range(0,n):
+            total = total + nums[i]
+            if total > maxi:
+                maxi = total
+            if total < 0:
+                total = 0
+        return maxi
