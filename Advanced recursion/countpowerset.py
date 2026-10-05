@@ -1,11 +1,9 @@
 class Solution:
 	def perfectSum(self, arr, target):
 		def backtrack(i, total):
-			
-		     if total == target:
-			   
-		        return 1 
-		     elif total > target:
+			if total == target:
+			   return 1
+		     elif total>target:
 		        return 0
 		     if i >= len(arr):
 		        return 0
